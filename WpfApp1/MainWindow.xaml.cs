@@ -23,6 +23,17 @@ namespace WpfApp1
         public MainWindow()
         {
             InitializeComponent();
+
+            string[] phones = { "iPhone 6S", "Lumia 950", "Nexus 5X", "LG G4", "Xiaomi MI5", "HTC A9" };
+        list.ItemsSource = phones;
+
+
+            
+        }
+        private void list_Selected(object sender, RoutedEventArgs e)
+        {
+            Phone p = (Phone)list.SelectedItem;
+            MessageBox.Show(p.Title);
         }
     }
 }

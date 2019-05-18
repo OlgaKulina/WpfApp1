@@ -6,7 +6,11 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+    <Grid Background="Red">
+        <ListBox Name="list" DisplayMemberPath="Title" SelectionChanged="list_Selected">
+            <local:Phone Title="iPhone 6S" Company="Apple" Price="54990" />
+            <local:Phone Title="Lumia 950" Company="Microsoft" Price="39990" />
+            <local:Phone Title="Nexus 5X" Company="Google" Price="29990" />
+        </ListBox>
     </Grid>
 </Window>
